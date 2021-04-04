@@ -66,34 +66,42 @@
 // console.log("d: ", d);
 
 // 11. Notacion de punto y corchetes
-var persona = {
-    nombre: "Juana",
-    apellido: "Perez",
-    edad: 25,
-    direccion: {
-        pais: "Colombia",
-        ciudad: "Manizales",
-        edificio: {
-            nombre: "Edificio principal",
-            telefono: "222-333"
-        }
-    }
-};
-// Notacion de punto
-console.log(persona);
-console.log(persona.apellido);
-console.log(persona.direccion);
-console.log(persona.direccion.pais);
+// var persona = {
+//     nombre: "Juana",
+//     apellido: "Perez",
+//     edad: 25,
+//     direccion: {
+//         pais: "Colombia",
+//         ciudad: "Manizales",
+//         edificio: {
+//             nombre: "Edificio principal",
+//             telefono: "222-333"
+//         }
+//     }
+// };
+// // Notacion de punto
+// console.log(persona);
+// console.log(persona.apellido);
+// console.log(persona.direccion);
+// console.log(persona.direccion.pais);
 
-persona.direccion.zipcode = 170002;
-console.log(persona.direccion);
-console.log(persona.direccion.zipcode);
+// persona.direccion.zipcode = 170002;
+// console.log(persona.direccion);
+// console.log(persona.direccion.zipcode);
 
-var edificio = persona.direccion.edificio;
-edificio.piso = "7mo piso";
-console.log(persona);
+// var edificio = persona.direccion.edificio;
+// edificio.piso = "7mo piso";
+// console.log(persona);
 
-// Notacion corchetes
-var campo = "edad";
-console.log(persona['direccion']['ciudad']);
-console.log(persona[campo]);
+// // Notacion corchetes
+// var campo = "edad";
+// console.log(persona['direccion']['ciudad']);
+// console.log(persona[campo]);
+
+// 12. Funciones
+function primeraFuncion() {
+    console.log("Invocada");
+}
+var miFuncion = primeraFuncion; // Se pasa el contexto de la funcion, no es invocada
+console.log(miFuncion);
+console.log(miFuncion()); // Cuando tiene los parentesis es invocada
