@@ -6,7 +6,9 @@
 // console.error(a);
 // console.info(a);
 
-// 7. Javascript no es asincrono y se ejecuta secuncialmente
+
+
+// // 7. Javascript no es asincrono y se ejecuta secuncialmente
 // function imprimir() {
 //     for (let i = 0; i < 4000; i++) {
 //         console.log('Imprimio');
@@ -19,7 +21,9 @@
 
 // imprimir();
 
-// 9. Escritura dinamica - Tipos primitivos
+
+
+// // 9. Escritura dinamica - Tipos primitivos
 // var num = 10;
 // var str = "texto";
 // var bol = true;
@@ -38,7 +42,9 @@
 
 // console.log(obj);
 
-// 10. Por valor y por referencia
+
+
+// // 10. Por valor y por referencia
 // Por valor (los valores primitivos siempre pasan por valor y crean su propio espacio de memoria)
 // var a = 10;
 // var b = a;
@@ -65,7 +71,9 @@
 // console.log("c: ", c);
 // console.log("d: ", d);
 
-// 11. Notacion de punto y corchetes
+
+
+// // 11. Notacion de punto y corchetes
 // var persona = {
 //     nombre: "Juana",
 //     apellido: "Perez",
@@ -98,7 +106,9 @@
 // console.log(persona['direccion']['ciudad']);
 // console.log(persona[campo]);
 
-// 12. Funciones
+
+
+// // 12. Funciones
 // function primeraFuncion() {
 //     console.log("Invocada");
 // }
@@ -106,7 +116,9 @@
 // console.log(miFuncion);
 // console.log(miFuncion()); // Cuando tiene los parentesis es invocada
 
-// 13. Parametro de las funciones
+
+
+// // 13. Parametro de las funciones
 // // Funcion con parametros
 // function imprimir(nombre, apellido) {
 //     // if (apellido === undefined) {
@@ -141,51 +153,89 @@
 
 // imprimir(miFuncion);
 
-// 14. Retorno de las funciones
-// Funciones que devuelven number
-function obtenerAleatorio() {
-    return Math.random();
-}
 
-// Funciones que devuelven string
-function obtenerNombre() {
-    return "Juan";
-}
 
-// Funciones que devuelven boolean
-function esMayor05() {
-    if (obtenerAleatorio() > 0.5) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// // 14. Retorno de las funciones
+// // Funciones que devuelven number
+// function obtenerAleatorio() {
+//     return Math.random();
+// }
 
-if (esMayor05()) {
-    console.log("Es mayor a 0.5");
-} else {
-    console.log("Es menor a 0.5");
-}
+// // Funciones que devuelven string
+// function obtenerNombre() {
+//     return "Juan";
+// }
 
-// Funciones que devuelven objetos
-function crearPersona(nombre, apellido) {
-    return {
-        nombre,
-        apellido
-    }
-}
-var persona = crearPersona("Juan", "Perez");
-console.log(persona);
+// // Funciones que devuelven boolean
+// function esMayor05() {
+//     if (obtenerAleatorio() > 0.5) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-// Funciones que devuelven funciones anonimas
-function creaFuncion() {
-    return function(nombre) {
-        console.log("Me creo " + nombre);
-        return function() {
-            console.log("Segunda funcion");
-        }
-    }
-}
-var nuevaFuncion = creaFuncion();
-var segundaFuncion = nuevaFuncion(persona.nombre);
-segundaFuncion();
+// if (esMayor05()) {
+//     console.log("Es mayor a 0.5");
+// } else {
+//     console.log("Es menor a 0.5");
+// }
+
+// // Funciones que devuelven objetos
+// function crearPersona(nombre, apellido) {
+//     return {
+//         nombre,
+//         apellido
+//     }
+// }
+// var persona = crearPersona("Juan", "Perez");
+// console.log(persona);
+
+// // Funciones que devuelven funciones anonimas
+// function creaFuncion() {
+//     return function(nombre) {
+//         console.log("Me creo " + nombre);
+//         return function() {
+//             console.log("Segunda funcion");
+//         }
+//     }
+// }
+// var nuevaFuncion = creaFuncion();
+// var segundaFuncion = nuevaFuncion(persona.nombre);
+// segundaFuncion();
+
+
+
+// // 15. Funciones en primera clase
+// // Las funciones son objetos
+
+
+
+// // 16. Metodos y el objeto this (Objeto con funciones anonimas)
+// var persona = {
+//     nombre: "Maria",
+//     apellido: "Silva",
+//     imprimirNombre: function() {
+//         console.log(this); // this Objeto persona
+//     },
+//     direccion: {
+//         pais: "Colombia",
+//         obtenerPais: function() {
+//             console.log(this); // this Objeto direccion
+//             var self = this;
+
+//             var nuevaDireccion = function() {
+//                 console.log(this); // Hace referencia al Objeto Window
+//                 console.log(self); // Hace referencia al Objeto direccion
+//                 console.log(self.pais); // Hace referencia al Objeto direccion por medio de la variable this que apunta al objeto direccion
+//             }
+//             nuevaDireccion();
+//         }
+//     }
+// };
+
+// persona.imprimirNombre();
+// persona.direccion.obtenerPais();
+
+
+// // 17. La palabra reservada
