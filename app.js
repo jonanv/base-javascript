@@ -40,27 +40,60 @@
 
 // 10. Por valor y por referencia
 // Por valor (los valores primitivos siempre pasan por valor y crean su propio espacio de memoria)
-var a = 10;
-var b = a;
+// var a = 10;
+// var b = a;
 
-console.log("a: ", a);
-console.log("b: ", b);
+// console.log("a: ", a);
+// console.log("b: ", b);
 
-a = 20;
+// a = 20;
 
-console.log("a: ", a);
-console.log("b: ", b);
+// console.log("a: ", a);
+// console.log("b: ", b);
 
-// Por referencia (Los objetos siempre pasan por referencia, comparten el mismo espacio de memoria)
-var c = {
-    nombre: "Juana"
+// // Por referencia (Los objetos siempre pasan por referencia, comparten el mismo espacio de memoria)
+// var c = {
+//     nombre: "Juana"
+// };
+// var d = c;
+
+// console.log("c: ", c);
+// console.log("d: ", d);
+
+// c.nombre = "Maria";
+
+// console.log("c: ", c);
+// console.log("d: ", d);
+
+// 11. Notacion de punto y corchetes
+var persona = {
+    nombre: "Juana",
+    apellido: "Perez",
+    edad: 25,
+    direccion: {
+        pais: "Colombia",
+        ciudad: "Manizales",
+        edificio: {
+            nombre: "Edificio principal",
+            telefono: "222-333"
+        }
+    }
 };
-var d = c;
+// Notacion de punto
+console.log(persona);
+console.log(persona.apellido);
+console.log(persona.direccion);
+console.log(persona.direccion.pais);
 
-console.log("c: ", c);
-console.log("d: ", d);
+persona.direccion.zipcode = 170002;
+console.log(persona.direccion);
+console.log(persona.direccion.zipcode);
 
-c.nombre = "Maria";
+var edificio = persona.direccion.edificio;
+edificio.piso = "7mo piso";
+console.log(persona);
 
-console.log("c: ", c);
-console.log("d: ", d);
+// Notacion corchetes
+var campo = "edad";
+console.log(persona['direccion']['ciudad']);
+console.log(persona[campo]);
