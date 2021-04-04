@@ -99,9 +99,44 @@
 // console.log(persona[campo]);
 
 // 12. Funciones
-function primeraFuncion() {
-    console.log("Invocada");
+// function primeraFuncion() {
+//     console.log("Invocada");
+// }
+// var miFuncion = primeraFuncion; // Se pasa el contexto de la funcion, no es invocada
+// console.log(miFuncion);
+// console.log(miFuncion()); // Cuando tiene los parentesis es invocada
+
+// 13. Parametro de las funciones
+// // Funcion con parametros
+// function imprimir(nombre, apellido) {
+//     // if (apellido === undefined) {
+//     //     apellido = "XXX";
+//     // }
+//     apellido = apellido || "XXX";
+//     console.log(nombre + " " + apellido);
+// }
+
+// var nombre = "Pedro"; // Variable explicita
+// imprimir("Juan"); // Variable anonima (Se crea al momento de llamar la funcion)(variable implicita)
+
+// // Funcion con objetos
+// function imprimir(persona) {
+//     console.log(persona.nombre + " " + persona.apellido);
+// }
+
+// var persona = {
+//     nombre: "Juan",
+//     apellido: "Silva"
+// }
+// imprimir(persona);
+
+// Funcion con funciones anonimas
+function imprimir(fn) {
+    fn();
 }
-var miFuncion = primeraFuncion; // Se pasa el contexto de la funcion, no es invocada
-console.log(miFuncion);
-console.log(miFuncion()); // Cuando tiene los parentesis es invocada
+
+var miFuncion = function() {
+    console.log("Funcion anonima");
+}
+
+imprimir(miFuncion);
