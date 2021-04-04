@@ -238,21 +238,27 @@
 // persona.direccion.obtenerPais();
 
 
+
 // // 17. La palabra reservada new
 // // Persona persona = new Persona(); // Declaracion en Java
 // // var persona = new Persona(); // Declaracin en JavaScript
 
-function Persona() {
-    this.nombre = "Juan";
-    this.apellido = "Vangioni";
-    this.edad = 30;
+// // Funcion de primera clase (Trabaja como una clase)
+// function Persona() {
+//     this.nombre = "Juan";
+//     this.apellido = "Vangioni";
+//     this.edad = 30;
 
-    this.nombreCompleto = function() {
-        return this.nombre + " " + this.apellido;
-    }
-}
+//     this.nombreCompleto = function() {
+//         return this.nombre + " " + this.apellido;
+//     }
+// }
 
-var persona = new Persona(); // Crea el objeto persona con sus atributos
-// var persona = Persona(); // Imprime lo que devuelva el metodo Persona y los this del metodo se los agrega al objeto window
-console.log(persona);
-console.log(persona.nombreCompleto());
+// var persona = new Persona(); // Crea el objeto persona con sus atributos
+// // var persona = Persona(); // Imprime lo que devuelva el metodo Persona y los this del metodo se los agrega al objeto window
+// console.log(persona);
+// console.log(persona.nombreCompleto());
+
+
+
+// // 18. 
