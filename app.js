@@ -130,13 +130,62 @@
 // }
 // imprimir(persona);
 
-// Funcion con funciones anonimas
-function imprimir(fn) {
-    fn();
+// // Funcion con funciones anonimas
+// function imprimir(fn) {
+//     fn();
+// }
+
+// var miFuncion = function() {
+//     console.log("Funcion anonima");
+// }
+
+// imprimir(miFuncion);
+
+// 14. Retorno de las funciones
+// Funciones que devuelven number
+function obtenerAleatorio() {
+    return Math.random();
 }
 
-var miFuncion = function() {
-    console.log("Funcion anonima");
+// Funciones que devuelven string
+function obtenerNombre() {
+    return "Juan";
 }
 
-imprimir(miFuncion);
+// Funciones que devuelven boolean
+function esMayor05() {
+    if (obtenerAleatorio() > 0.5) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+if (esMayor05()) {
+    console.log("Es mayor a 0.5");
+} else {
+    console.log("Es menor a 0.5");
+}
+
+// Funciones que devuelven objetos
+function crearPersona(nombre, apellido) {
+    return {
+        nombre,
+        apellido
+    }
+}
+var persona = crearPersona("Juan", "Perez");
+console.log(persona);
+
+// Funciones que devuelven funciones anonimas
+function creaFuncion() {
+    return function(nombre) {
+        console.log("Me creo " + nombre);
+        return function() {
+            console.log("Segunda funcion");
+        }
+    }
+}
+var nuevaFuncion = creaFuncion();
+var segundaFuncion = nuevaFuncion(persona.nombre);
+segundaFuncion();
