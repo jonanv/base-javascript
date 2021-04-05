@@ -261,4 +261,27 @@
 
 
 
-// // 18. 
+// // 19. Prototipos - Prototype
+function Persona() {
+    this.nombre = "Giovanni";
+    this.apellido = "Vargas";
+    this.edad = 29;
+    this.pais = "Colombia";
+}
+
+// Son utilizados para no cargar esta informacion en memoria, solo se carga una vez, para el caso que se definan 1000 objetos tipo persona
+Persona.prototype.imprimirInfo = function() {
+    console.log(this.nombre + " " + this.apellido + "(" + this.edad + ")");
+};
+
+var gio = new Persona();
+console.log(gio);
+gio.imprimirInfo();
+
+Number.prototype.esPositivo = function() {
+    if (this > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
