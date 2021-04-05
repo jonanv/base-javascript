@@ -262,26 +262,58 @@
 
 
 // // 19. Prototipos - Prototype
-function Persona() {
-    this.nombre = "Giovanni";
-    this.apellido = "Vargas";
-    this.edad = 29;
-    this.pais = "Colombia";
-}
+// function Persona() {
+//     this.nombre = "Giovanni";
+//     this.apellido = "Vargas";
+//     this.edad = 29;
+//     this.pais = "Colombia";
+// }
 
-// Son utilizados para no cargar esta informacion en memoria, solo se carga una vez, para el caso que se definan 1000 objetos tipo persona
-Persona.prototype.imprimirInfo = function() {
-    console.log(this.nombre + " " + this.apellido + "(" + this.edad + ")");
-};
+// // Son utilizados para no cargar esta informacion en memoria, solo se carga una vez, para el caso que se definan 1000 objetos tipo persona
+// Persona.prototype.imprimirInfo = function() {
+//     console.log(this.nombre + " " + this.apellido + "(" + this.edad + ")");
+// };
 
-var gio = new Persona();
-console.log(gio);
-gio.imprimirInfo();
+// var gio = new Persona();
+// console.log(gio);
+// gio.imprimirInfo();
 
-Number.prototype.esPositivo = function() {
-    if (this > 0) {
+// // Agrega una nueva funcion al wrapper Number en el protipo, al momento de crear un numero este puede acceder al metodo
+// Number.prototype.esPositivo = function() {
+//     if (this > 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+
+// // 20. Funciones anonimas
+// // Funcion anonima que esta dentro de un contexto y es invocada al final con ()
+(function() {
+    var a = 10;
+    console.log(a);
+
+    function cambiarA() {
+        a = 20;
+    }
+
+    cambiarA();
+
+    console.log(a);
+})();
+
+function ejecutarFuncion(fn) {
+    if (fn() === 1) {
         return true;
     } else {
         return false;
     }
-}
+};
+
+console.log(
+    ejecutarFuncion(function() {
+        console.log("Funcion anonima ejecutada!");
+        return 0;
+    })
+);
