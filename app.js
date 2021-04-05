@@ -290,30 +290,63 @@
 
 // // 20. Funciones anonimas
 // // Funcion anonima que esta dentro de un contexto y es invocada al final con ()
-(function() {
-    var a = 10;
-    console.log(a);
+// (function() {
+//     var a = 10;
+//     console.log(a);
 
-    function cambiarA() {
-        a = 20;
-    }
+//     function cambiarA() {
+//         a = 20;
+//     }
 
-    cambiarA();
+//     cambiarA();
 
-    console.log(a);
-})();
+//     console.log(a);
+// })();
 
-function ejecutarFuncion(fn) {
-    if (fn() === 1) {
-        return true;
+// function ejecutarFuncion(fn) {
+//     if (fn() === 1) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(
+//     ejecutarFuncion(function() {
+//         console.log("Funcion anonima ejecutada!");
+//         return 0;
+//     })
+// );
+
+
+
+// // 21. Funciones typeof e instanceof
+function identifica(param) {
+    // console.log(typeof param);
+    // typeof (Tipo de parametro, tipo primitivo, funcion, objeto)
+    if (typeof param == "function") {
+        param();
     } else {
-        return false;
+        console.log(param);
     }
-};
 
-console.log(
-    ejecutarFuncion(function() {
-        console.log("Funcion anonima ejecutada!");
-        return 0;
-    })
-);
+    // instanceof (Compara dos objetos, si el parametro es de tipo Persona)
+    console.log(param instanceof Persona);
+}
+
+identifica(1);
+
+function Persona() {
+    this.nombre = "Giovanni";
+    this.edad = "29";
+}
+
+var giovanni = new Persona();
+
+identifica(giovanni);
+
+var fn = function() {
+    console.log("Funcion ejecutada");
+}
+
+identifica(fn);
