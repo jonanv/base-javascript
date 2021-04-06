@@ -488,33 +488,60 @@
 
 
 // // 26. Polimorfismo en Javascript
-function determinaDato(a) {
-    if (a === undefined) {
-        console.log("A es undefinded... no se que hacer");
+// function determinaDato(a) {
+//     if (a === undefined) {
+//         console.log("A es undefinded... no se que hacer");
+//     }
+//     if (typeof a === "number") {
+//         console.log("A es un numero, y puedo hacer operaciones con numeros");
+//     }
+//     if (typeof a === "string") {
+//         console.log("A es un texto, y puedo hacer operaciones con textos");
+//     }
+//     if (typeof a === "object") {
+//         console.log("A es un objeto, pero puede ser cualquier cosa");
+//         if (a instanceof Number) {
+//             console.log("A es un objeto numerico...");
+//         }
+//     }
+// }
+
+// determinaDato();
+// determinaDato(1);
+// determinaDato("Fernando");
+// determinaDato({nombre: "Giovanni", apellido: "Vangioni"});
+
+// var b = new Number(3);
+// console.log(b);
+// determinaDato(b);
+
+
+
+// // 27. Cuidado con las funciones y su contexto
+function crearFunciones() {
+    var arr = [];
+    var numero = 1;
+
+    for (let numero = 1; numero <= 5; numero++) {
+        arr.push(
+            (function(numero) { // Funcion anonima con contexto que es ejecuta en el momento de se definida con la invocacion al final y que recibe como parametro numero que retorna una funcion
+                return function() {
+                    console.log(numero);
+                }
+            })(numero)
+        );
     }
-    if (typeof a === "number") {
-        console.log("A es un numero, y puedo hacer operaciones con numeros");
-    }
-    if (typeof a === "string") {
-        console.log("A es un texto, y puedo hacer operaciones con textos");
-    }
-    if (typeof a === "object") {
-        console.log("A es un objeto, pero puede ser cualquier cosa");
-        if (a instanceof Number) {
-            console.log("A es un objeto numerico...");
-        }
-    }
+
+    return arr;
 }
 
-determinaDato();
-determinaDato(1);
-determinaDato("Fernando");
-determinaDato({nombre: "Giovanni", apellido: "Vangioni"});
-
-var b = new Number(3);
-console.log(b);
-determinaDato(b);
+var funciones = crearFunciones();
+funciones[0]();
+funciones[1]();
+funciones[2]();
+funciones[3]();
+funciones[4]();
 
 
 
-// // 27. 
+// // 28. 
