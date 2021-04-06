@@ -354,7 +354,7 @@
 
 
 
-// // 21. Arreglos
+// // 22. Arreglos
 // var arr = [5, 4, 3, 2, 1];
 // console.log(arr);
 // console.log(arr[0], arr[4], arr[5]);
@@ -446,16 +446,41 @@
 
 
 
-// // 23. Argumentos arguments (Argumentos de funciones)
-function miFuncion(a, b, c, d) {
-    console.log(arguments); // Son los argumentos que son enviados al momento de la invocacion
+// // 24. Argumentos arguments (Argumentos de funciones)
+// function miFuncion(a, b, c, d) {
+//     console.log(arguments); // Son los argumentos que son enviados al momento de la invocacion
 
-    if(arguments.length !== 4) {
-        console.error("La funcion necesita 4 parametros");
-        return;
-    }
-    console.log(a + b + c + d);
+//     if(arguments.length !== 4) {
+//         console.error("La funcion necesita 4 parametros");
+//         return;
+//     }
+//     console.log(a + b + c + d);
+// }
+
+// miFuncion(10, 20, 30, 40);
+// miFuncion(10, 20, 30);
+
+
+// // 25. Sobrecarga de operadores en Javascript
+// // En Javascript no exite la sobrecarga de operadores
+function crearProducto(nombre, precio) {
+    nombre = nombre || "Sin nombre";
+    precio = precio || 0;
+
+    console.log("Producto: " + nombre + ", Precio: " + precio);
 }
 
-miFuncion(10, 20, 30, 40);
-miFuncion(10, 20, 30);
+function crearProducto100(nombre) {
+    crearProducto(nombre, 100);
+}
+
+function crearProductoCamisa(precio) {
+    crearProducto("Camisa", precio);
+}
+
+crearProducto();
+crearProducto("Lapiz");
+crearProducto100("Corrector");
+crearProductoCamisa(75);
+
+// // 26. 
