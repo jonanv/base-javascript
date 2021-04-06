@@ -288,6 +288,7 @@
 // }
 
 
+
 // // 20. Funciones anonimas
 // // Funcion anonima que esta dentro de un contexto y es invocada al final con ()
 // (function() {
@@ -321,32 +322,84 @@
 
 
 // // 21. Funciones typeof e instanceof
-function identifica(param) {
-    // console.log(typeof param);
-    // typeof (Tipo de parametro, tipo primitivo, funcion, objeto)
-    if (typeof param == "function") {
-        param();
-    } else {
-        console.log(param);
-    }
+// function identifica(param) {
+//     // console.log(typeof param);
+//     // typeof (Tipo de parametro, tipo primitivo, funcion, objeto)
+//     if (typeof param == "function") {
+//         param();
+//     } else {
+//         console.log(param);
+//     }
 
-    // instanceof (Compara dos objetos, si el parametro es de tipo Persona)
-    console.log(param instanceof Persona);
-}
+//     // instanceof (Compara dos objetos, si el parametro es de tipo Persona)
+//     console.log(param instanceof Persona);
+// }
 
-identifica(1);
+// identifica(1);
 
-function Persona() {
-    this.nombre = "Giovanni";
-    this.edad = "29";
-}
+// function Persona() {
+//     this.nombre = "Giovanni";
+//     this.edad = "29";
+// }
 
-var giovanni = new Persona();
+// var giovanni = new Persona();
 
-identifica(giovanni);
+// identifica(giovanni);
 
-var fn = function() {
-    console.log("Funcion ejecutada");
-}
+// var fn = function() {
+//     console.log("Funcion ejecutada");
+// }
 
-identifica(fn);
+// identifica(fn);
+
+
+
+// // 21. Arreglos
+var arr = [5, 4, 3, 2, 1];
+console.log(arr);
+console.log(arr[0], arr[4], arr[5]);
+
+// // reverse = Se invierte el arreglo
+arr.reverse();
+console.log(arr);
+
+// // map = ejecuta un funcion contra cada uno de los elementos de arreglo sin ejecutar un bucle
+arr = arr.map(function(elem) {
+    return elem *= elem;
+});
+console.log(arr);
+
+arr = arr.map(Math.sqrt);
+console.log(arr);
+
+// // join = convierte el arreglo a string o se envia separador de cada elemento e imprime el arreglo en string
+arr = arr.join("|");
+console.log(arr);
+
+// // split = regresa un arreglo o se envia parametro para cortar el arreglo
+arr = arr.split("|");
+console.log(arr);
+
+// // push = agrega un nuevo elemento al arreglo
+arr.push("6");
+console.log(arr);
+
+// // unshift = elimina el elemento en la primera posicion
+arr.unshift("0");
+console.log(arr);
+
+// // toString = convierte a texto, es mas rapido que el join, pero no envia parametros
+console.log(arr.toString());
+
+// // pop = elimina el ultimo elemento del arreglo y devuelve que posicion era
+var elimine = arr.pop();
+console.log(elimine);
+
+// // splice = elimina elementos del arreglo de acuerdo a su posicion, tambien cuentos se quieren eliminar, tambien permite reemplar elementos en la posicion
+arr.splice(1, 1, "10");
+console.log(arr);
+
+// // slice = retorna una porcion del arreglo desde su posicion inicial a hasta donde quiere cortar el arreglo
+arr = arr.slice(0, 2); // primer parametro desde donde quiero iniciar a cortar, segundo parametro es la segunda posicion donde quiero cortar
+console.log(arr);
+
