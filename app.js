@@ -461,26 +461,60 @@
 // miFuncion(10, 20, 30);
 
 
+
 // // 25. Sobrecarga de operadores en Javascript
 // // En Javascript no exite la sobrecarga de operadores
-function crearProducto(nombre, precio) {
-    nombre = nombre || "Sin nombre";
-    precio = precio || 0;
+// function crearProducto(nombre, precio) {
+//     nombre = nombre || "Sin nombre";
+//     precio = precio || 0;
 
-    console.log("Producto: " + nombre + ", Precio: " + precio);
+//     console.log("Producto: " + nombre + ", Precio: " + precio);
+// }
+
+// function crearProducto100(nombre) {
+//     crearProducto(nombre, 100);
+// }
+
+// function crearProductoCamisa(precio) {
+//     crearProducto("Camisa", precio);
+// }
+
+// crearProducto();
+// crearProducto("Lapiz");
+// crearProducto100("Corrector");
+// crearProductoCamisa(75);
+
+
+
+
+// // 26. Polimorfismo en Javascript
+function determinaDato(a) {
+    if (a === undefined) {
+        console.log("A es undefinded... no se que hacer");
+    }
+    if (typeof a === "number") {
+        console.log("A es un numero, y puedo hacer operaciones con numeros");
+    }
+    if (typeof a === "string") {
+        console.log("A es un texto, y puedo hacer operaciones con textos");
+    }
+    if (typeof a === "object") {
+        console.log("A es un objeto, pero puede ser cualquier cosa");
+        if (a instanceof Number) {
+            console.log("A es un objeto numerico...");
+        }
+    }
 }
 
-function crearProducto100(nombre) {
-    crearProducto(nombre, 100);
-}
+determinaDato();
+determinaDato(1);
+determinaDato("Fernando");
+determinaDato({nombre: "Giovanni", apellido: "Vangioni"});
 
-function crearProductoCamisa(precio) {
-    crearProducto("Camisa", precio);
-}
+var b = new Number(3);
+console.log(b);
+determinaDato(b);
 
-crearProducto();
-crearProducto("Lapiz");
-crearProducto100("Corrector");
-crearProductoCamisa(75);
 
-// // 26. 
+
+// // 27. 
