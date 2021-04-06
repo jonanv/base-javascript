@@ -355,51 +355,107 @@
 
 
 // // 21. Arreglos
-var arr = [5, 4, 3, 2, 1];
-console.log(arr);
-console.log(arr[0], arr[4], arr[5]);
+// var arr = [5, 4, 3, 2, 1];
+// console.log(arr);
+// console.log(arr[0], arr[4], arr[5]);
 
-// // reverse = Se invierte el arreglo
-arr.reverse();
-console.log(arr);
+// // // reverse = Se invierte el arreglo
+// arr.reverse();
+// console.log(arr);
 
-// // map = ejecuta un funcion contra cada uno de los elementos de arreglo sin ejecutar un bucle
-arr = arr.map(function(elem) {
-    return elem *= elem;
-});
-console.log(arr);
+// // // map = ejecuta un funcion contra cada uno de los elementos de arreglo sin ejecutar un bucle
+// arr = arr.map(function(elem) {
+//     return elem *= elem;
+// });
+// console.log(arr);
 
-arr = arr.map(Math.sqrt);
-console.log(arr);
+// arr = arr.map(Math.sqrt);
+// console.log(arr);
 
-// // join = convierte el arreglo a string o se envia separador de cada elemento e imprime el arreglo en string
-arr = arr.join("|");
-console.log(arr);
+// // // join = convierte el arreglo a string o se envia separador de cada elemento e imprime el arreglo en string
+// arr = arr.join("|");
+// console.log(arr);
 
-// // split = regresa un arreglo o se envia parametro para cortar el arreglo
-arr = arr.split("|");
-console.log(arr);
+// // // split = regresa un arreglo o se envia parametro para cortar el arreglo
+// arr = arr.split("|");
+// console.log(arr);
 
-// // push = agrega un nuevo elemento al arreglo
-arr.push("6");
-console.log(arr);
+// // // push = agrega un nuevo elemento al arreglo
+// arr.push("6");
+// console.log(arr);
 
-// // unshift = elimina el elemento en la primera posicion
-arr.unshift("0");
-console.log(arr);
+// // // unshift = elimina el elemento en la primera posicion
+// arr.unshift("0");
+// console.log(arr);
 
-// // toString = convierte a texto, es mas rapido que el join, pero no envia parametros
-console.log(arr.toString());
+// // // toString = convierte a texto, es mas rapido que el join, pero no envia parametros
+// console.log(arr.toString());
 
-// // pop = elimina el ultimo elemento del arreglo y devuelve que posicion era
-var elimine = arr.pop();
-console.log(elimine);
+// // // pop = elimina el ultimo elemento del arreglo y devuelve que posicion era
+// var elimine = arr.pop();
+// console.log(elimine);
 
-// // splice = elimina elementos del arreglo de acuerdo a su posicion, tambien cuentos se quieren eliminar, tambien permite reemplar elementos en la posicion
-arr.splice(1, 1, "10");
-console.log(arr);
+// // // splice = elimina elementos del arreglo de acuerdo a su posicion, tambien cuentos se quieren eliminar, tambien permite reemplar elementos en la posicion
+// arr.splice(1, 1, "10");
+// console.log(arr);
 
-// // slice = retorna una porcion del arreglo desde su posicion inicial a hasta donde quiere cortar el arreglo
-arr = arr.slice(0, 2); // primer parametro desde donde quiero iniciar a cortar, segundo parametro es la segunda posicion donde quiero cortar
-console.log(arr);
+// // // slice = retorna una porcion del arreglo desde su posicion inicial a hasta donde quiere cortar el arreglo
+// arr = arr.slice(0, 2); // primer parametro desde donde quiero iniciar a cortar, segundo parametro es la segunda posicion donde quiero cortar
+// console.log(arr);
 
+// // // length = indica el tamanio del arreglo
+// console.log(arr.length);
+
+// var arr = [
+//     true,
+//     {   // Objeto anonimo
+//         nombre: "Giovanni",
+//         apellido: "Vangioni"
+//     },
+//     function() {
+//         console.log("Estoy viviendo en un arreglo");
+//     },
+//     function(persona) {
+//         // console.log(arr[1].nombre + " " + arr[1].apellido);
+//         console.log(persona.nombre + " " + persona.apellido);
+//     },
+//     [   // Arreglo anonimo
+//         "Fernando", 
+//         "Carlos", 
+//         "Hernando", 
+//         "Melissa",
+//         [
+//             "Juan",
+//             "Pedro",
+//             "Dilcia",
+//             function() {
+//                 console.log(this);
+//             }
+//         ]
+//     ] 
+// ];
+
+// console.log(arr);
+// console.log(arr[1]);
+// arr[2](); // Invoca la funcion anonima que esta dentro del arreglo
+// arr[3](arr[1]);
+// console.log(arr[4][4][1]);
+// arr2 = arr[4][4];
+// arr2[3]();
+// arr[4][4][3]();
+
+
+
+// // 23. Argumentos arguments (Argumentos de funciones)
+function miFuncion(a, b, c, d) {
+    console.log(arguments); // Son los argumentos que son enviados al momento de la invocacion
+
+    if(arguments.length !== 4) {
+        console.error("La funcion necesita 4 parametros");
+        return;
+    }
+    console.log(a + b + c + d);
+}
+
+miFuncion(10, 20, 30, 40);
+miFuncion(10, 20, 30);
