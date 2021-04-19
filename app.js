@@ -546,24 +546,53 @@
 
 
 // // 28. Objeto Number
-var a = 10.4235435;
-var b = new Number(10);
+// var a = 10.4235435;
+// var b = new Number(10);
 
-console.log(a === b); // Evalua los tipos
-console.log(a == b); // Evalua los valores
+// console.log(a === b); // Evalua los tipos
+// console.log(a == b); // Evalua los valores
 
-// // toFixed(2) = formatea el numero a una cantidad de datos dencimales (2) el maximo valor que puede recibir es (20)
-console.log(a.toFixed(2));
+// // // toFixed(2) = formatea el numero a una cantidad de datos dencimales (2) el maximo valor que puede recibir es (20)
+// console.log(a.toFixed(2));
 
-// // toString() = Obtiene el valor textual en una cadena de caracteres
-console.log(a.toString());
+// // // toString() = Obtiene el valor textual en una cadena de caracteres
+// console.log(a.toString());
 
-// // toPrecision(4) = obtiene el numero de caracteres preciso (10.42)
-console.log(a.toPrecision(4));
+// // // toPrecision(4) = obtiene el numero de caracteres preciso (10.42)
+// console.log(a.toPrecision(4));
 
-// // NaN (Not a Number)(No es un Numeros)
-console.log(a * 'f');
+// // // NaN (Not a Number)(No es un Numeros)
+// console.log(a * 'f');
 
-var b = new Number('20');
-console.log(b);
-console.log(b.valueOf()); // valueOf() retorna el valor primitivo de number (convierte)
+// var b = new Number('20');
+// console.log(b);
+// console.log(b.valueOf()); // valueOf() retorna el valor primitivo de number (convierte)
+
+
+
+
+// // 29. Objecto Booleano
+var a = true;
+var b = false;
+
+var a = new Boolean(); // Valor por defecto false
+console.log(a);
+
+var a = new Boolean('q'); // Valor que retorna true (porque envia una cadena con texto)
+console.log(a);
+
+var a = new Boolean(''); // Valor que retorna false (porque envia una cadena vacia)
+console.log(a);
+
+var a = new Boolean(0); // Valor que retorna false (porque envia un number)
+console.log(a);
+
+var a = new Boolean(1); // Valor que retorna true (porque envia un number)
+console.log(a);
+
+var a = new Boolean(Infinity); // Valor que retorna true (porque envia un number)
+console.log(a);
+
+if (0) {
+    console.log('Me impirmi!!!');
+}
