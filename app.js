@@ -518,30 +518,52 @@
 
 
 // // 27. Cuidado con las funciones y su contexto
-function crearFunciones() {
-    var arr = [];
-    var numero = 1;
+// function crearFunciones() {
+//     var arr = [];
+//     var numero = 1;
 
-    for (let numero = 1; numero <= 5; numero++) {
-        arr.push(
-            (function(numero) { // Funcion anonima con contexto que es ejecuta en el momento de se definida con la invocacion al final y que recibe como parametro numero que retorna una funcion
-                return function() {
-                    console.log(numero);
-                }
-            })(numero)
-        );
-    }
+//     for (let numero = 1; numero <= 5; numero++) {
+//         arr.push(
+//             (function(numero) { // Funcion anonima con contexto que es ejecuta en el momento de se definida con la invocacion al final y que recibe como parametro numero que retorna una funcion
+//                 return function() {
+//                     console.log(numero);
+//                 }
+//             })(numero)
+//         );
+//     }
 
-    return arr;
-}
+//     return arr;
+// }
 
-var funciones = crearFunciones();
-funciones[0]();
-funciones[1]();
-funciones[2]();
-funciones[3]();
-funciones[4]();
+// var funciones = crearFunciones();
+// console.log(funciones)
+// funciones[0]();
+// funciones[1]();
+// funciones[2]();
+// funciones[3]();
+// funciones[4]();
 
 
 
-// // 28. 
+// // 28. Objeto Number
+var a = 10.4235435;
+var b = new Number(10);
+
+console.log(a === b); // Evalua los tipos
+console.log(a == b); // Evalua los valores
+
+// // toFixed(2) = formatea el numero a una cantidad de datos dencimales (2) el maximo valor que puede recibir es (20)
+console.log(a.toFixed(2));
+
+// // toString() = Obtiene el valor textual en una cadena de caracteres
+console.log(a.toString());
+
+// // toPrecision(4) = obtiene el numero de caracteres preciso (10.42)
+console.log(a.toPrecision(4));
+
+// // NaN (Not a Number)(No es un Numeros)
+console.log(a * 'f');
+
+var b = new Number('20');
+console.log(b);
+console.log(b.valueOf()); // valueOf() retorna el valor primitivo de number (convierte)
