@@ -601,26 +601,44 @@
 
 // // 30. Objetos String
 // // Un objeto tipo String es un objeto y no es un arreglo de caracteres
-var a = new String('Giovanni');
-console.log(a[0]);
-console.log(a);
+// var a = new String('Giovanni');
+// console.log(a[0]);
+// console.log(a);
 
-console.log(a.toUpperCase()); // Devuelve el valor en mayusculas
-console.log(a.toLowerCase()); // Devuelve el valor en minusculas
+// console.log(a.toUpperCase()); // Devuelve el valor en mayusculas
+// console.log(a.toLowerCase()); // Devuelve el valor en minusculas
 
-i = a.indexOf('n'); // Retorna la primera posicion donde encuentra la letra
-console.log('La letra esta en la posicion: ', i);
+// i = a.indexOf('n'); // Retorna la primera posicion donde encuentra la letra
+// console.log('La letra esta en la posicion: ', i);
 
-i = a.lastIndexOf('n'); // Retorna la ultima posicion donde encuentra la letra
-console.log('La letra esta en la posicion: ', i);
+// i = a.lastIndexOf('n'); // Retorna la ultima posicion donde encuentra la letra
+// console.log('La letra esta en la posicion: ', i);
 
-var nombre = a.substr(6); // Retorna el string desde la posicion que se le indico, para este caso 6
-console.log(nombre);
+// var nombre = a.substr(6); // Retorna el string desde la posicion que se le indico, para este caso 6
+// console.log(nombre);
 
-var split = a.split('n'); // Devuelve un arreglo con el string separado por el caracter indicado
-console.log(split);
-console.log(split.length);
+// var split = a.split('n'); // Devuelve un arreglo con el string separado por el caracter indicado
+// console.log(split);
+// console.log(split.length);
 
 
 
 // // 31. Objeto Fecha (Date)
+var hoy = new Date();
+console.log(hoy);
+
+var fechaMili = new Date(0);
+console.log(fechaMili);
+
+// var fechaFija = new Date(anio, mes, dia, hora, min, seg, mili);
+var fechaFija = new Date(2016, 9, 21, 23, 10, 15, 20);
+console.log(fechaFija);
+
+console.log(hoy.getFullYear()); // Regresa el anio completo
+console.log(hoy.getDate()); // Regresa el dia
+console.log(hoy.getHours()); // Regresa la hora
+console.log(hoy.getMilliseconds()); // Regresa los milisegundos
+
+
+
+// // 32. Operaciones con fechas
