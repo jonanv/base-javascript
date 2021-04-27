@@ -572,27 +572,55 @@
 
 
 // // 29. Objecto Booleano
-var a = true;
-var b = false;
+// var a = true;
+// var b = false;
 
-var a = new Boolean(); // Valor por defecto false
+// var a = new Boolean(); // Valor por defecto false
+// console.log(a);
+
+// var a = new Boolean('q'); // Valor que retorna true (porque envia una cadena con texto)
+// console.log(a);
+
+// var a = new Boolean(''); // Valor que retorna false (porque envia una cadena vacia)
+// console.log(a);
+
+// var a = new Boolean(0); // Valor que retorna false (porque envia un number)
+// console.log(a);
+
+// var a = new Boolean(1); // Valor que retorna true (porque envia un number)
+// console.log(a);
+
+// var a = new Boolean(Infinity); // Valor que retorna true (porque envia un number)
+// console.log(a);
+
+// if (0) {
+//     console.log('Me impirmi!!!');
+// }
+
+
+
+// // 30. Objetos String
+// // Un objeto tipo String es un objeto y no es un arreglo de caracteres
+var a = new String('Giovanni');
+console.log(a[0]);
 console.log(a);
 
-var a = new Boolean('q'); // Valor que retorna true (porque envia una cadena con texto)
-console.log(a);
+console.log(a.toUpperCase()); // Devuelve el valor en mayusculas
+console.log(a.toLowerCase()); // Devuelve el valor en minusculas
 
-var a = new Boolean(''); // Valor que retorna false (porque envia una cadena vacia)
-console.log(a);
+i = a.indexOf('n'); // Retorna la primera posicion donde encuentra la letra
+console.log('La letra esta en la posicion: ', i);
 
-var a = new Boolean(0); // Valor que retorna false (porque envia un number)
-console.log(a);
+i = a.lastIndexOf('n'); // Retorna la ultima posicion donde encuentra la letra
+console.log('La letra esta en la posicion: ', i);
 
-var a = new Boolean(1); // Valor que retorna true (porque envia un number)
-console.log(a);
+var nombre = a.substr(6); // Retorna el string desde la posicion que se le indico, para este caso 6
+console.log(nombre);
 
-var a = new Boolean(Infinity); // Valor que retorna true (porque envia un number)
-console.log(a);
+var split = a.split('n'); // Devuelve un arreglo con el string separado por el caracter indicado
+console.log(split);
+console.log(split.length);
 
-if (0) {
-    console.log('Me impirmi!!!');
-}
+
+
+// // 31. Objeto Fecha (Date)
