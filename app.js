@@ -642,22 +642,47 @@
 
 
 // // 32. Operaciones con fechas
-var fecha = new Date(2016, 9, 10);
-console.log(fecha);
-fecha.setDate(fecha.getDate() + 5);
-console.log(fecha);
+// var fecha = new Date(2016, 9, 10);
+// console.log(fecha);
+// fecha.setDate(fecha.getDate() + 5);
+// console.log(fecha);
 
-Date.prototype.sumarDias = function(dias) {
-    fecha.setDate(this.getDate() + dias);
-    return this;
+// Date.prototype.sumarDias = function(dias) {
+//     fecha.setDate(this.getDate() + dias);
+//     return this;
+// }
+
+
+// Date.prototype.sumarAnios = function(anios) {
+//     fecha.setFullYear(this.getFullYear() + anios);
+//     return this;
+// }
+
+// console.log(fecha);
+// console.log(fecha.sumarDias(5));
+// console.log(fecha.sumarAnios(5));
+
+
+
+// // 33. Objeto Math
+var PI = Math.PI;
+var E = Math.E;
+
+console.log(PI);
+console.log(E);
+
+var num1 = 10.44353;
+
+console.log(num1);
+console.log(Math.round(num1)); // Redondea el numero
+console.log(Math.round(num1 * 100) / 100);
+console.log(Math.floor(num1)); // Elimina los deciamales sin redondeo
+console.log(Math.floor(Math.random() * 100));
+
+function randomEntre(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
+console.log(randomEntre(1, 10));
 
-
-Date.prototype.sumarAnios = function(anios) {
-    fecha.setFullYear(this.getFullYear() + anios);
-    return this;
-}
-
-console.log(fecha);
-console.log(fecha.sumarDias(5));
-console.log(fecha.sumarAnios(5));
+console.log(Math.sqrt(10)); // Raiz cuadrada
+console.log(Math.pow(7, 2)); // Potencia
