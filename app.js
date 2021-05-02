@@ -624,21 +624,40 @@
 
 
 // // 31. Objeto Fecha (Date)
-var hoy = new Date();
-console.log(hoy);
+// var hoy = new Date();
+// console.log(hoy);
 
-var fechaMili = new Date(0);
-console.log(fechaMili);
+// var fechaMili = new Date(0);
+// console.log(fechaMili);
 
-// var fechaFija = new Date(anio, mes, dia, hora, min, seg, mili);
-var fechaFija = new Date(2016, 9, 21, 23, 10, 15, 20);
-console.log(fechaFija);
+// // var fechaFija = new Date(anio, mes, dia, hora, min, seg, mili);
+// var fechaFija = new Date(2016, 9, 21, 23, 10, 15, 20);
+// console.log(fechaFija);
 
-console.log(hoy.getFullYear()); // Regresa el anio completo
-console.log(hoy.getDate()); // Regresa el dia
-console.log(hoy.getHours()); // Regresa la hora
-console.log(hoy.getMilliseconds()); // Regresa los milisegundos
+// console.log(hoy.getFullYear()); // Regresa el anio completo
+// console.log(hoy.getDate()); // Regresa el dia
+// console.log(hoy.getHours()); // Regresa la hora
+// console.log(hoy.getMilliseconds()); // Regresa los milisegundos
 
 
 
 // // 32. Operaciones con fechas
+var fecha = new Date(2016, 9, 10);
+console.log(fecha);
+fecha.setDate(fecha.getDate() + 5);
+console.log(fecha);
+
+Date.prototype.sumarDias = function(dias) {
+    fecha.setDate(this.getDate() + dias);
+    return this;
+}
+
+
+Date.prototype.sumarAnios = function(anios) {
+    fecha.setFullYear(this.getFullYear() + anios);
+    return this;
+}
+
+console.log(fecha);
+console.log(fecha.sumarDias(5));
+console.log(fecha.sumarAnios(5));
