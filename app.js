@@ -665,24 +665,58 @@
 
 
 // // 33. Objeto Math
-var PI = Math.PI;
-var E = Math.E;
+// var PI = Math.PI;
+// var E = Math.E;
 
-console.log(PI);
-console.log(E);
+// console.log(PI);
+// console.log(E);
 
-var num1 = 10.44353;
+// var num1 = 10.44353;
 
-console.log(num1);
-console.log(Math.round(num1)); // Redondea el numero
-console.log(Math.round(num1 * 100) / 100);
-console.log(Math.floor(num1)); // Elimina los deciamales sin redondeo
-console.log(Math.floor(Math.random() * 100));
+// console.log(num1);
+// console.log(Math.round(num1)); // Redondea el numero
+// console.log(Math.round(num1 * 100) / 100);
+// console.log(Math.floor(num1)); // Elimina los deciamales sin redondeo
+// console.log(Math.floor(Math.random() * 100));
 
-function randomEntre(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-console.log(randomEntre(1, 10));
+// function randomEntre(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+// console.log(randomEntre(1, 10));
 
-console.log(Math.sqrt(10)); // Raiz cuadrada
-console.log(Math.pow(7, 2)); // Potencia
+// console.log(Math.sqrt(10)); // Raiz cuadrada
+// console.log(Math.pow(7, 2)); // Potencia
+
+
+
+// // 34. Expresiones Regulares
+// var reg1 = RegExp('a'); // Manera de definirla literalmente
+// var reg2 = /a/; // Manera de definir tambien la expresion regular
+
+// 3 controles o contraladores que permite controlar la expresion regular
+// i = insensible
+// g = todas las apariciones
+// m = multilinea
+
+var texto = 'Hola Mundoo, 12345.';
+
+var arr = texto.match(/^a/); // ^ = Busca en la primera posicion del texto
+var arr = texto.match(/o$/); // $ = Busca en la ultima posicion del texto
+var arr = texto.match(/.../); // ... = Devuelve los primeros caracteres (cualquiera) del texto
+var arr = texto.match(/^.o/); // ^.o = Cualquier caracter al principio seguido de una 'o'
+var arr = texto.match(/[0-9]/); // [0-9] = Define un rango de numeros entre 0 y 9
+var arr = texto.match(/[a-z]/); // [a-z] = Define un rango de caracteres
+var arr = texto.match(/[a-zA-Z]/); // [a-zA-Z] = Define un rango de caracteres minusculas y mayusculas
+var arr = texto.match(/^H[aeiou]/); // ^H[aeiou] = La primera letra sea una H y la siguiente un rango de caracteres de las vocales
+var arr = texto.match(/[aeiou].$/); // [aeiou].$ = Cualquier letra seguido de cualquier caracter que este al final
+var arr = texto.match(/[aeiou]./); // [aeiou]. = Cualquier vocal seguida de cualquier caracter
+var arr = texto.match(/\s/); // \s = Cualquier separacion en el texto
+var arr = texto.match(/\w/); // \w = [a-zA-Z0-9] = Cualquier letra y cualqiuer numero en el rango
+var arr = texto.match(/\d/); // \d = [0-9] = Cualquier numero en el rango
+var arr = texto.match(/m/i); // /m/i = Cualquier numero en el rango
+var arr = texto.match(/[aeiou]/g); // /[aeiou]/g = Todas las ocurrencia en el rango
+var arr = texto.match(/o+/g); // /o+/g = Todas las ocurrencia o y cualquier cantidad de o juntas
+var arr = texto.match(/o?/g); // /o?/g = Es como si preguntara si existe la muestra sino muestra un caracter vacio
+var arr = texto.match(/o{2}/); // /o{2}/ = Aparezca 2 veces
+
+console.log(arr);
