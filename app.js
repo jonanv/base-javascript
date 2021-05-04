@@ -698,39 +698,65 @@
 // // g = todas las apariciones
 // // m = multilinea
 
-var texto = 'Hola Mundoo, 12345.';
+// var texto = 'Hola Mundoo, 12345.';
 
-var arr = texto.match(/^a/); // ^ = Busca en la primera posicion del texto
-var arr = texto.match(/o$/); // $ = Busca en la ultima posicion del texto
-var arr = texto.match(/.../); // ... = Devuelve los primeros caracteres (cualquiera) del texto
-var arr = texto.match(/^.o/); // ^.o = Cualquier caracter al principio seguido de una 'o'
-var arr = texto.match(/[0-9]/); // [0-9] = Define un rango de numeros entre 0 y 9
-var arr = texto.match(/[a-z]/); // [a-z] = Define un rango de caracteres
-var arr = texto.match(/[a-zA-Z]/); // [a-zA-Z] = Define un rango de caracteres minusculas y mayusculas
-var arr = texto.match(/^H[aeiou]/); // ^H[aeiou] = La primera letra sea una H y la siguiente un rango de caracteres de las vocales
-var arr = texto.match(/[aeiou].$/); // [aeiou].$ = Cualquier letra seguido de cualquier caracter que este al final
-var arr = texto.match(/[aeiou]./); // [aeiou]. = Cualquier vocal seguida de cualquier caracter
-var arr = texto.match(/\s/); // \s = Cualquier separacion en el texto
-var arr = texto.match(/\w/); // \w = [a-zA-Z0-9] = Cualquier letra y cualqiuer numero en el rango
-var arr = texto.match(/\d/); // \d = [0-9] = Cualquier numero en el rango
-var arr = texto.match(/m/i); // /m/i = Cualquier numero en el rango
-var arr = texto.match(/[aeiou]/g); // /[aeiou]/g = Todas las ocurrencia en el rango
-var arr = texto.match(/o+/g); // /o+/g = Todas las ocurrencia o y cualquier cantidad de o juntas
-var arr = texto.match(/o?/g); // /o?/g = Es como si preguntara si existe la muestra sino muestra un caracter vacio
-var arr = texto.match(/o{2}/); // /o{2}/ = Aparezca 2 veces
+// var arr = texto.match(/^a/); // ^ = Busca en la primera posicion del texto
+// var arr = texto.match(/o$/); // $ = Busca en la ultima posicion del texto
+// var arr = texto.match(/.../); // ... = Devuelve los primeros caracteres (cualquiera) del texto
+// var arr = texto.match(/^.o/); // ^.o = Cualquier caracter al principio seguido de una 'o'
+// var arr = texto.match(/[0-9]/); // [0-9] = Define un rango de numeros entre 0 y 9
+// var arr = texto.match(/[a-z]/); // [a-z] = Define un rango de caracteres
+// var arr = texto.match(/[a-zA-Z]/); // [a-zA-Z] = Define un rango de caracteres minusculas y mayusculas
+// var arr = texto.match(/^H[aeiou]/); // ^H[aeiou] = La primera letra sea una H y la siguiente un rango de caracteres de las vocales
+// var arr = texto.match(/[aeiou].$/); // [aeiou].$ = Cualquier letra seguido de cualquier caracter que este al final
+// var arr = texto.match(/[aeiou]./); // [aeiou]. = Cualquier vocal seguida de cualquier caracter
+// var arr = texto.match(/\s/); // \s = Cualquier separacion en el texto
+// var arr = texto.match(/\w/); // \w = [a-zA-Z0-9] = Cualquier letra y cualqiuer numero en el rango
+// var arr = texto.match(/\d/); // \d = [0-9] = Cualquier numero en el rango
+// var arr = texto.match(/m/i); // /m/i = Cualquier numero en el rango
+// var arr = texto.match(/[aeiou]/g); // /[aeiou]/g = Todas las ocurrencia en el rango
+// var arr = texto.match(/o+/g); // /o+/g = Todas las ocurrencia o y cualquier cantidad de o juntas
+// var arr = texto.match(/o?/g); // /o?/g = Es como si preguntara si existe la muestra sino muestra un caracter vacio
+// var arr = texto.match(/o{2}/); // /o{2}/ = Aparezca 2 veces
 
-console.log(arr);
+// console.log(arr);
 
-var texto = 'Aeropuerto';
 
-var arr = texto.match(/[aeiou]{2,2}/ig); // /[aeiou]{2,2}/ig = Vocales que se repiten al menos dos veces
-var arr = texto.match(/\w{2,2}/ig); // \w{2,2}/ig = Cualquier letra dos veces
 
-console.log(arr);
+// // 35. Expresiones Regulares 2
 
-var texto = 'La Respuesta de la suma es: 45 + 60 = 105';
+// var texto = 'Aeropuerto';
 
-var arr = texto.match(/\d{1,}/g); // /\d{1,}/g = Cualquier numero, todas las ocurrencias agrupados de 1 a n
-var arr = texto.match(/\d{1,}|Respuesta/g); // /\d{1,}/g = Cualquier numero, todas las ocurrencias agrupados de 1 a n ó la palabra respuesta insensible
+// var arr = texto.match(/[aeiou]{2,2}/ig); // /[aeiou]{2,2}/ig = Vocales que se repiten al menos dos veces
+// var arr = texto.match(/\w{2,2}/ig); // \w{2,2}/ig = Cualquier letra dos veces
 
-console.log(arr);
+// console.log(arr);
+
+// var texto = 'La Respuesta de la suma es: 45 + 60 = 105';
+
+// var arr = texto.match(/\d{1,}/g); // /\d{1,}/g = Cualquier numero, todas las ocurrencias agrupados de 1 a n
+// var arr = texto.match(/\d{1,}|Respuesta/g); // /\d{1,}/g = Cualquier numero, todas las ocurrencias agrupados de 1 a n ó la palabra respuesta insensible
+
+// console.log(arr);
+
+
+
+// 36. El punto y coma es opcional
+;;;;;;
+;;;;;var a = 10
+;;;;;var b = 20
+;;;;;var c = 30
+;;;;;var d = 'Giovanni'
+;;;;;;
+;;;;;console.log(a)
+;;;;;console.log(b)
+;;;;;console.log(c)
+;;;;;console.log(d)
+;;;;;;
+
+function getNumero() {
+    return // Hacer un return undefined porque no encuentra nada al lado de la palabra return
+        10
+}
+
+console.log(getNumero());
