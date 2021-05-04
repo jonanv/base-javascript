@@ -693,10 +693,10 @@
 // var reg1 = RegExp('a'); // Manera de definirla literalmente
 // var reg2 = /a/; // Manera de definir tambien la expresion regular
 
-// 3 controles o contraladores que permite controlar la expresion regular
-// i = insensible
-// g = todas las apariciones
-// m = multilinea
+// // 3 controles o contraladores que permite controlar la expresion regular
+// // i = insensible
+// // g = todas las apariciones
+// // m = multilinea
 
 var texto = 'Hola Mundoo, 12345.';
 
@@ -718,5 +718,19 @@ var arr = texto.match(/[aeiou]/g); // /[aeiou]/g = Todas las ocurrencia en el ra
 var arr = texto.match(/o+/g); // /o+/g = Todas las ocurrencia o y cualquier cantidad de o juntas
 var arr = texto.match(/o?/g); // /o?/g = Es como si preguntara si existe la muestra sino muestra un caracter vacio
 var arr = texto.match(/o{2}/); // /o{2}/ = Aparezca 2 veces
+
+console.log(arr);
+
+var texto = 'Aeropuerto';
+
+var arr = texto.match(/[aeiou]{2,2}/ig); // /[aeiou]{2,2}/ig = Vocales que se repiten al menos dos veces
+var arr = texto.match(/\w{2,2}/ig); // \w{2,2}/ig = Cualquier letra dos veces
+
+console.log(arr);
+
+var texto = 'La Respuesta de la suma es: 45 + 60 = 105';
+
+var arr = texto.match(/\d{1,}/g); // /\d{1,}/g = Cualquier numero, todas las ocurrencias agrupados de 1 a n
+var arr = texto.match(/\d{1,}|Respuesta/g); // /\d{1,}/g = Cualquier numero, todas las ocurrencias agrupados de 1 a n ó la palabra respuesta insensible
 
 console.log(arr);
