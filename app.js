@@ -742,21 +742,50 @@
 
 
 // 36. El punto y coma es opcional
-;;;;;;
-;;;;;var a = 10
-;;;;;var b = 20
-;;;;;var c = 30
-;;;;;var d = 'Giovanni'
-;;;;;;
-;;;;;console.log(a)
-;;;;;console.log(b)
-;;;;;console.log(c)
-;;;;;console.log(d)
-;;;;;;
+// ;;;;;;
+// ;;;;;var a = 10
+// ;;;;;var b = 20
+// ;;;;;var c = 30
+// ;;;;;var d = 'Giovanni'
+// ;;;;;;
+// ;;;;;console.log(a)
+// ;;;;;console.log(b)
+// ;;;;;console.log(c)
+// ;;;;;console.log(d)
+// ;;;;;;
 
-function getNumero() {
-    return // Hacer un return undefined porque no encuentra nada al lado de la palabra return
-        10
-}
+// function getNumero() {
+//     return // Hacer un return undefined porque no encuentra nada al lado de la palabra return
+//         10
+// }
 
-console.log(getNumero());
+// console.log(getNumero());
+
+
+
+// // 37. Comentarios en Javascript y espaciado
+
+// Comentario simple
+
+/*
+    Comentario multilinea
+    Comentario multilinea
+    Comentario multilinea
+*/
+
+var arr = [
+    'Giovanni',
+    {
+        nombre: 'Giovanni',
+        apellido: 'Vargas',
+        getNombre: function() {
+            return this.nombre + ' ' + this.apellido
+        }
+    },
+    true,
+    function() {
+        console.log(this);
+    }
+];
+
+console.log(arr[3]());
