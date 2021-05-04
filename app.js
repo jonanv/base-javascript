@@ -773,19 +773,84 @@
     Comentario multilinea
 */
 
-var arr = [
-    'Giovanni',
-    {
-        nombre: 'Giovanni',
-        apellido: 'Vargas',
-        getNombre: function() {
-            return this.nombre + ' ' + this.apellido
-        }
-    },
-    true,
-    function() {
-        console.log(this);
-    }
-];
+// var arr = [
+//     'Giovanni',
+//     {
+//         nombre: 'Giovanni',
+//         apellido: 'Vargas',
+//         getNombre: function() {
+//             return this.nombre + ' ' + this.apellido
+//         }
+//     },
+//     true,
+//     function() {
+//         console.log(this);
+//     }
+// ];
 
-console.log(arr[3]());
+// console.log(arr[3]());
+
+
+
+// // 38. Palabras reservadas en Javascript
+// // abstract
+// // boolean
+// // break
+// // byte
+// // case 
+// // catch
+// // char
+// // class
+// // const
+// // continue
+// // debugger
+// // default
+// // delete
+// // do
+// // double
+// // else
+// // enum
+// // export
+// // extends
+// // false
+// // final
+// // finally
+// // float
+// // for
+// // function
+// // goto
+// // if
+// // implements
+// // import
+// // in
+// // instanceof
+// // int
+// // interface
+// // long
+// // native
+// // new
+// // null
+// // package
+// // private
+// // protected
+// // public
+// // return
+// // short
+// // super
+// // switch
+// // synchronized
+// // this
+// // throw
+// // transient
+// // true
+// // try
+// // typeof
+// // var
+// // void
+// // volatile
+// // while
+// // with
+
+
+
+// // 39. Manejo de errores en Javascript
