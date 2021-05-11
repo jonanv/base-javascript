@@ -855,69 +855,69 @@
 
 // // 39. Manejo de errores en Javascript
 // // El try necesita un catch o un finally siempre de lo contrario da error
-try {
-    // var a = 100;
-    // console.log('El valor de a: ', a);
+// try {
+//     // var a = 100;
+//     // console.log('El valor de a: ', a);
 
-    // var a = 0 / das;
-    // console.log('El valor de a: ', a);
+//     // var a = 0 / das;
+//     // console.log('El valor de a: ', a);
 
-    // throw 'oh oh!'; // el throw forza a pasar al catch
+//     // throw 'oh oh!'; // el throw forza a pasar al catch
 
-    // var a = 101;
-    // if (a === 100) {
-    //     throw 'oh oh!';
-    // }
-    // else {
-    //     throw 'esto esta mal';
-    // }
+//     // var a = 101;
+//     // if (a === 100) {
+//     //     throw 'oh oh!';
+//     // }
+//     // else {
+//     //     throw 'esto esta mal';
+//     // }
 
-    // throw new Error('Error tipo 1');
+//     // throw new Error('Error tipo 1');
 
-    // throw {
-    //     nombreError: 'Error tipo 1',
-    //     action: 'Salir corriendo a echarle agua al servidor',
-    //     codeError: 1
-    // }
+//     // throw {
+//     //     nombreError: 'Error tipo 1',
+//     //     action: 'Salir corriendo a echarle agua al servidor',
+//     //     codeError: 1
+//     // }
 
-    // throw function() {
-    //     console.log('Funcion del throw...');
-    // }
+//     // throw function() {
+//     //     console.log('Funcion del throw...');
+//     // }
 
-    throw 1 // n cualquier numero
+//     throw 1 // n cualquier numero
 
-} catch (error) {
-    // console.log('Error de catch: ', error);
+// } catch (error) {
+//     // console.log('Error de catch: ', error);
 
-    // if (error === 'oh oh!') {
-    //     console.log('Error tipo 1');
-    // }
-    // else if (error === 'esto esta mal') {
-    //     console.log('Error tipo 2');
-    // }
+//     // if (error === 'oh oh!') {
+//     //     console.log('Error tipo 1');
+//     // }
+//     // else if (error === 'esto esta mal') {
+//     //     console.log('Error tipo 2');
+//     // }
 
-    // console.log(error);
-    // console.log(error.message);
+//     // console.log(error);
+//     // console.log(error.message);
 
-    // console.log(error);
-    // console.log(error.nombreError);
-    // console.log(error.action);
-    // console.log(error.codeError);
+//     // console.log(error);
+//     // console.log(error.nombreError);
+//     // console.log(error.action);
+//     // console.log(error.codeError);
 
-    // error();
-    // console.log('Parte del catch...');
+//     // error();
+//     // console.log('Parte del catch...');
 
-    registroError(error);
-}
-finally {
-    console.log('Finalmente');
-}
+//     registroError(error);
+// }
+// finally {
+//     console.log('Finalmente');
+// }
 
-function registroError(error) {
-    var ahora = new Date();
-    console.log('Se registro un error: ', error, ' a las: ', ahora.getTime());
-}
+// function registroError(error) {
+//     var ahora = new Date();
+//     console.log('Se registro un error: ', error, ' a las: ', ahora.getTime());
+// }
 
 
 
-// // 40. 
+// // 40. Cookies - Mac OS
