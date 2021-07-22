@@ -920,4 +920,56 @@
 
 
 
-// // 40. Cookies - Mac OS
+// // 40. Cookies - instalacion de nodejs en Mac OS
+// // install http-server
+// // http-server -p 8081
+
+
+
+// // 42. escape, unescape y cookies - uso de cookies
+// document.cookie = "nombre=giovanni";
+// document.cookie = "apellido=vargas";
+function createCookie(name, value) {
+    value = escape(value);
+    let today = new Date();
+    today.setMonth(today.getMonth() + 1);
+    document.cookie = name + '=' + value + ';expires=' + today.toUTCString() + ';';
+}
+
+function deleteCookie(name) {
+    let today = new Date();
+    today.setMonth(today.getMonth() - 1);
+    document.cookie = name + '=x' + ';expires=' + today.toUTCString() + ';';
+}
+
+function getCookie(name) {
+    let cookies = document.cookie;
+    let cookiesArray = cookies.split('; ');
+    console.log(cookiesArray);
+
+    for (let i = 0; i < cookiesArray.length; i++) {
+        let parArr = cookiesArray[i].split('=');
+        cookiesArray[i] = parArr;
+
+        if (parArr[0] === name) {
+            return escape(parArr[1]);
+        }
+    }
+    console.log(cookiesArray);
+    return undefined;
+}
+
+createCookie('nombre', 'giovanni');
+createCookie('apellido', 'vargas');
+createCookie('correo', 'jonan-vargas23@hotmail.com');
+
+deleteCookie('nombre');
+
+console.log(getCookie('apellido'));
+
+let cookies = document.cookie;
+console.log(cookies);
+
+let demo = '123*123;123"123/';
+console.log(escape(demo));
+console.log(unescape(escape(demo)));
