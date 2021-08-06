@@ -978,32 +978,83 @@
 
 
 // // 43.Funciones especiales Call(), Apply() y Bind()
-let carro = {
-    color: 'Blanco',
-    marca: 'Mazda',
-    imprimir: function() {
-        let salida = this.marca + " - " + this.color;
-        return salida;
-    }
-}
+// let carro = {
+//     color: 'Blanco',
+//     marca: 'Mazda',
+//     imprimir: function() {
+//         let salida = this.marca + " - " + this.color;
+//         return salida;
+//     }
+// }
 
-let carro2 = {
-    color: 'Negro',
-    marca: 'Toyota',
-}
+// let carro2 = {
+//     color: 'Negro',
+//     marca: 'Toyota',
+// }
 
-console.log(carro.imprimir());
+// console.log(carro.imprimir());
 
-let logCarro = function(arg1, arg2) {
-    console.log('Carro: ', this.imprimir());
-    console.log('Argumentos: ', arg1, arg2);
-}
+// let logCarro = function(arg1, arg2) {
+//     console.log('Carro: ', this.imprimir()); // Llama al objeto global que es window
+//     console.log('Argumentos: ', arg1, arg2);
+//     console.log("========================");
+// }
 
-let logaModeloCarro = logCarro.bind(carro);
-logaModeloCarro('Subaru', 'Impreza');
+// let logModeloCarro = logCarro.bind(carro); // Cambia de referencia el objeto global window al objeto carro
+// logModeloCarro('Subaru', 'Impreza');
 
-logaModeloCarro.call(carro, '123', '456');
-logaModeloCarro.apply(carro, ['1adf', 'ewre']);
+// logModeloCarro.call(carro, '123', '456'); // Invoca el objeto carro. cambia el valor del this por el del objeto
+// logModeloCarro.apply(carro, ['1adf', 'ewre']); // Es casi igual que el call pero el apply espera solo dos parametros, el segundo debe estar en formato de un arreglo
 
-// Funciones prestadas
-console.log(carro.imprimir.call(carro2));
+// // Funciones prestadas
+// console.log(carro.imprimir.call(carro2));
+
+
+
+// // 44.IF... ELSE....
+// let nota = 55;
+
+// if (nota > 60) {
+//     console.log('A');
+// } else if (nota >= 80) {
+//     console.log('B');
+// } else if (nota >= 70) {
+//     console.log('C');
+// } else if (nota >= 60) {
+//     console.log('D');
+// } else {
+//     console.log('Algo por aqui...');
+// }
+
+// console.log('Termino el codigo');
+
+// let a = 10;
+// let b = 20;
+
+// // let c = (a > b) ? a : b; // Otra forma
+
+// let c = (a > b) ? function() {
+//     console.log('A es mayor a B');
+//     return a;
+// }() : function() {
+//     console.log('B es mayor a A');
+//     return b;
+// }();
+// console.log(c);
+
+// let x = undefined;
+// let y = 20;
+
+// let z = x || y;
+// console.log(c);
+
+// function getname(name) {
+//     let n = name || '<sin nombre>' || '<sin apellido>' || undefined;
+//     console.log(n);
+// }
+
+// getname();
+
+
+
+// // 45.Switch... condicional multiple
