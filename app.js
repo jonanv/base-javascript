@@ -1059,20 +1059,46 @@
 
 // // 45.Switch... condicional multiple
 
-let mes = 2;
+// let mes = 2;
 
-switch (mes) {
-    case 1:
-        console.log('Enero');
-        break;
-    case 2:
-        console.log('Febrero');
-        break;
-    case 3:
-        console.log('Marzo');
-        break;
+// switch (mes) {
+//     case 1:
+//         console.log('Enero');
+//         break;
+//     case 2:
+//         console.log('Febrero');
+//         break;
+//     case 3:
+//         console.log('Marzo');
+//         break;
 
-    default:
-        console.log('Cualquier otro mes');
-        break;
-}
+//     default:
+//         console.log('Cualquier otro mes');
+//         break;
+// }
+
+
+
+// // 46.JSON y breve historia
+
+let objJSON = {
+    nombre: 'Giovanni',
+    apellidos: 'Vargas González',
+    edad: 29,
+    ciudad: 'Manizales',
+    imprimir: function() {
+        console.log(this);
+    }
+};
+
+console.log(objJSON);
+objJSON.imprimir();
+
+let jsonString = JSON.stringify(objJSON);
+console.log(jsonString);
+
+let objDesdeJson = JSON.parse(jsonString);
+console.log(objDesdeJson);
+console.log(objDesdeJson.nombre);
+// // Se pierde la funcion anonima cuando se converte nuevamente a JSON por eso es importante usar Prototipos
+// // objDesdeJson.imprimir();
