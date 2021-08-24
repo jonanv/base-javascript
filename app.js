@@ -1131,37 +1131,56 @@
 // } while (i < 10);
 
 
+
 // // 48.Ciclo For y For in - Reflejo
-for (let i = 0; i < 10; i++) {
-    console.log(i);
-}
+// for (let i = 0; i < 10; i++) {
+//     console.log(i);
+// }
 
-let Persona = function () {
-    this.nombre = "Giovanni";
-    this.apellido = "Vargas";
-    this.edad = 29;
-}
+// let Persona = function () {
+//     this.nombre = "Giovanni";
+//     this.apellido = "Vargas";
+//     this.edad = 29;
+// }
 
-let giovanni = new Persona();
-Persona.prototype.ciudad = 'Manizales';
+// let giovanni = new Persona();
+// Persona.prototype.ciudad = 'Manizales';
 
-// Reflejo
-// Habilidad que tiene los objetos de conocerse a sí mismos
-for (const prop in giovanni) {
-    // Comprueba que el objeto sí tiene la propiedad
-    // console.log(giovanni.hasOwnProperty(prop));
+// // Reflejo
+// // Habilidad que tiene los objetos de conocerse a sí mismos
+// for (const prop in giovanni) {
+//     // Comprueba que el objeto sí tiene la propiedad
+//     // console.log(giovanni.hasOwnProperty(prop));
 
-    if (!giovanni.hasOwnProperty(prop)) {
-        continue;
+//     if (!giovanni.hasOwnProperty(prop)) {
+//         continue;
+//     }
+
+//     console.log(prop + ': ' + giovanni[prop]);
+// }
+
+// for (const num in [1,2,3,4,5,6,7,8,9,10]) {
+//     console.log(num);
+// }
+
+// [1,2,Object,4,true,6,false,8,9,"10"].forEach(element => {
+//     console.log(element);
+// });
+
+
+
+// // 49.Rotulando los ciclos
+for_principal:
+for (let i = 1; i <= 5; i++) {
+    console.log('i', i);
+
+    for_secundario:
+    for (let j = 1; j <= 5; j++) {
+        console.log('j', j);
+        
+        for (let x = 1; x <= 5; x++) {
+            console.log('x', x);
+            break for_principal;
+        }
     }
-
-    console.log(prop + ': ' + giovanni[prop]);
 }
-
-for (const num in [1,2,3,4,5,6,7,8,9,10]) {
-    console.log(num);
-}
-
-[1,2,Object,4,true,6,false,8,9,"10"].forEach(element => {
-    console.log(element);
-});
