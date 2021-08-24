@@ -1079,26 +1079,53 @@
 
 
 
-// // 46.JSON y breve historia
+// // 46. JSON y breve historia
 
-let objJSON = {
-    nombre: 'Giovanni',
-    apellidos: 'Vargas González',
-    edad: 29,
-    ciudad: 'Manizales',
-    imprimir: function() {
-        console.log(this);
-    }
-};
+// let objJSON = {
+//     nombre: 'Giovanni',
+//     apellidos: 'Vargas González',
+//     edad: 29,
+//     ciudad: 'Manizales',
+//     imprimir: function() {
+//         console.log(this);
+//     }
+// };
 
-console.log(objJSON);
-objJSON.imprimir();
+// console.log(objJSON);
+// objJSON.imprimir();
 
-let jsonString = JSON.stringify(objJSON);
-console.log(jsonString);
+// let jsonString = JSON.stringify(objJSON);
+// console.log(jsonString);
 
-let objDesdeJson = JSON.parse(jsonString);
-console.log(objDesdeJson);
-console.log(objDesdeJson.nombre);
+// let objDesdeJson = JSON.parse(jsonString);
+// console.log(objDesdeJson);
+// console.log(objDesdeJson.nombre);
 // // Se pierde la funcion anonima cuando se converte nuevamente a JSON por eso es importante usar Prototipos
 // // objDesdeJson.imprimir();
+
+
+
+// // 47. Ciclo While y Do While
+// let i = 0;
+
+// while (i < 10) {
+//     i++;
+
+//     if (i === 5) {
+//         break;
+//     }
+
+//     console.log(i);
+// }
+
+let i = 0;
+
+do {
+    i++;
+
+    if (i === 5) {
+        continue;
+    }
+
+    console.log(i);
+} while (i < 10);
