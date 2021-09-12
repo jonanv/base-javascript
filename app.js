@@ -1170,17 +1170,49 @@
 
 
 // // 49.Rotulando los ciclos
-for_principal:
-for (let i = 1; i <= 5; i++) {
-    console.log('i', i);
+// for_principal:
+// for (let i = 1; i <= 5; i++) {
+//     console.log('i', i);
 
-    for_secundario:
-    for (let j = 1; j <= 5; j++) {
-        console.log('j', j);
+//     for_secundario:
+//     for (let j = 1; j <= 5; j++) {
+//         console.log('j', j);
         
-        for (let x = 1; x <= 5; x++) {
-            console.log('x', x);
-            break for_principal;
-        }
+//         for (let x = 1; x <= 5; x++) {
+//             console.log('x', x);
+//             break for_principal;
+//         }
+//     }
+// }
+
+
+
+// // 50.Funciones de tiempo en JavaScript
+
+setTimeout(() => {
+    console.log('Paso un segundo.');
+}, 1000);
+
+let segundos = 0;
+let intervalo = setInterval(() => {
+    segundos++;
+    console.log('Segundos:', segundos);
+    if (segundos === 3) {
+        clearInterval(intervalo);
     }
-}
+}, 1000);
+
+let juan = {
+    nombre: 'Giovanni',
+    apellido: 'Vargas',
+    imprimir: function() {
+        console.log(this); // No se puede utilizar this dentro del setTimeout porque apunta al objeto global window, por eso se hace la instanciacion de self
+        let self = this;
+        setTimeout(() => {
+            console.log(self);
+            console.log(self.nombre + ' ' + self.apellido);
+        }, 1000);
+    }
+};
+
+juan.imprimir();
