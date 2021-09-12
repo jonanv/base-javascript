@@ -1236,18 +1236,22 @@
 
 // // El modo correcto es encapsulare el 'use strict' para que no cause problemas en todo el archivo,
 // // para el ejemplo se hace con una funcion anonima
-(function() {
-    'use strict';
-    nombre = 'Giovanni';
+// (function() {
+//     'use strict';
+//     nombre = 'Giovanni';
     
-    function getNombre() {
-        'use strict';
+//     function getNombre() {
+//         'use strict';
     
-        nombre = 'Giovanni';
+//         nombre = 'Giovanni';
     
-        return nombre;
-    }
+//         return nombre;
+//     }
     
-    console.log(nombre)
-    console.log(getNombre());
-})();
+//     console.log(nombre)
+//     console.log(getNombre());
+// })();
+
+
+
+// // 56.Despedida.. pero hay más por venir.
