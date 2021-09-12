@@ -1189,30 +1189,65 @@
 
 // // 50.Funciones de tiempo en JavaScript
 
-setTimeout(() => {
-    console.log('Paso un segundo.');
-}, 1000);
+// setTimeout(() => {
+//     console.log('Paso un segundo.');
+// }, 1000);
 
-let segundos = 0;
-let intervalo = setInterval(() => {
-    segundos++;
-    console.log('Segundos:', segundos);
-    if (segundos === 3) {
-        clearInterval(intervalo);
+// let segundos = 0;
+// let intervalo = setInterval(() => {
+//     segundos++;
+//     console.log('Segundos:', segundos);
+//     if (segundos === 3) {
+//         clearInterval(intervalo);
+//     }
+// }, 1000);
+
+// let juan = {
+//     nombre: 'Giovanni',
+//     apellido: 'Vargas',
+//     imprimir: function() {
+//         console.log(this); // No se puede utilizar this dentro del setTimeout porque apunta al objeto global window, por eso se hace la instanciacion de self
+//         let self = this;
+//         setTimeout(() => {
+//             console.log(self);
+//             console.log(self.nombre + ' ' + self.apellido);
+//         }, 1000);
+//     }
+// };
+
+// juan.imprimir();
+
+
+
+
+// // 51.Eventos 101
+
+
+// // 52.Bloqueando el click derecho de la página.
+
+
+// // 53.Evento on submit y parámetros URL
+
+
+// // 54.Cajas de dialogo
+
+
+// // 55.JavaScript - use strict - Modo estricto
+
+// // El modo correcto es encapsulare el 'use strict' para que no cause problemas en todo el archivo,
+// // para el ejemplo se hace con una funcion anonima
+(function() {
+    'use strict';
+    nombre = 'Giovanni';
+    
+    function getNombre() {
+        'use strict';
+    
+        nombre = 'Giovanni';
+    
+        return nombre;
     }
-}, 1000);
-
-let juan = {
-    nombre: 'Giovanni',
-    apellido: 'Vargas',
-    imprimir: function() {
-        console.log(this); // No se puede utilizar this dentro del setTimeout porque apunta al objeto global window, por eso se hace la instanciacion de self
-        let self = this;
-        setTimeout(() => {
-            console.log(self);
-            console.log(self.nombre + ' ' + self.apellido);
-        }, 1000);
-    }
-};
-
-juan.imprimir();
+    
+    console.log(nombre)
+    console.log(getNombre());
+})();
